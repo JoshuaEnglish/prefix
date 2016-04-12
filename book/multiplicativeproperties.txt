@@ -1,0 +1,18 @@
+======================================
+Multiplicative Properties of 0 and -1
+======================================
+
+To demonstrate how to use the properties and how this book will
+prove things, let's start with a couple of basic proofs. We know
+that anything times 0 is 0, right? We can prove it:
+
+.. list-table:: A Proof
+    :widths: 7 3
+    :class: proof
+
+    * - :prefix:`=` :unchanging:`× a 0` :prefix:`0`
+      - Given
+    * - :prefix:`= +` :unchanged:`× a 0` :changing:`0` :prefix:`0`
+      - Identity of +
+    * - |there4| :prefix:`= 0 0`
+      - |QED|

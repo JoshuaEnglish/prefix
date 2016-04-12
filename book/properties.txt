@@ -1,0 +1,86 @@
+========================
+Properties of Operations
+========================
+
+.. default-role:: prefix
+
+The goal of this book is to develop not simple rules of translation 
+and calculation, but to perform algebra.
+By this, I mean being able to take :math:`3x + 2 = 14` into prefix notation 
+:segment:`= + * 3 x 2 14` and get :segment:`= x 4` (which is :math:`x=4` in
+infix notation).
+
+In prefix notation, we work with statements of equality that can be 
+true or false. Clearly, the goal is to get true statements, but the
+false statements can come in handy to prove something can't be true.
+
+Statements begin with the `=` symbol. A statement is *solved
+for a variable* when the variable is the first item after the :prefix:`=`
+and does not occur in the rest of the statement. `= x 5` is considered
+solved for `x`. 
+
+True statements are in the form `= a a` where `a` stands for any single
+number. `= 0 0` is true, so is `= 45 45`.
+
+Properties of Addition and Multiplication
+-----------------------------------------
+
+These properties show portions of statments that can be swapped 
+without affecting the truth value of the statement.
+
+.. note::
+    
+    In all these examples, the letters `A`, `B`, and `C` can stand in for 
+    either a single number or a binary operator followed by two operands.
+    
+.. list-table:: Properties
+    :widths: 1 2 2
+    :header-rows: 1
+    :stub-columns: 1
+    :name: basic-properties
+    
+    * - Name
+      - Addition
+      - Multiplication
+    * - Identity
+      - :prefix:`+ A 0` |sameas| :prefix:`A` |sameas| :prefix:`+ 0 A`
+      - :prefix:`× 1 A` |sameas| :prefix:`A` |sameas| :prefix:`× A 1`
+    * - Inverse
+      - :prefix:`+ A ~ A` |sameas| :prefix:`0` |sameas| :prefix:`+ A -A`
+      - :prefix:`× A` :sup:`1` |/| :sub:`A` |sameas| :prefix:`1` |sameas| :prefix:`× A ÷ 1 A`
+    * - Commutative
+      - :prefix:`+ A B` |sameas| :prefix:`+ B A`
+      - :prefix:`× A B` |sameas| :prefix:`* B A`
+    * - Associative
+      - :prefix:`+ + A B C` |sameas| :prefix:`+ A + B C`
+      - :prefix:`× × A B C` |sameas| :prefix:`× A × B C`
+    * - Distributive
+      - :prefix:`× A + B C` |sameas| :prefix:`+ × A B * A C`
+      - 
+      
+:prefix:`× A - B C` |sameas| :prefix:`- × A B × A C`
+
+As noted, the operands can be single things (numbers or variables) or a group of 
+three things (operator, operand, operand) or even a group of five
+things (operator, operand, operator, operand, operand).
+
+These substitutions can be used anywhere in the statement.
+
+
+Equality Properties
+-------------------
+
+These properties only apply at the beginnig of a statement. These must 
+begin with the `=` symbol.
+
+.. list-table:: Properties
+    :widths: 1 2
+    :header-rows: 0
+    :stub-columns: 1
+    :name: equality-properties
+    
+    * - Symmetry of Equality
+      - `= A B` |sameas| `= B A`
+    * - Transitive Property of Equality
+      - `= A B` ; `= B C` |rarr| `= A C`
+

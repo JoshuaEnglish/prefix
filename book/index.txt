@@ -1,0 +1,29 @@
+.. Prefix Algebra documentation master file, created by
+   sphinx-quickstart on Tue Apr 12 09:32:33 2016.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Prefix Algebra
+==========================================
+
+The goal of this book is to walk through a standard course of algebra
+using prefix notation. Along the way you will explore the basic 
+properties of algebra and apply those properties to specific problems.
+
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+   whatisprefix
+   properties
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+

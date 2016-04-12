@@ -1,0 +1,68 @@
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('SourceCodePro-Regular.otf') format('opentype'),
+}
+
+@font-face{
+    font-family: Charter;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('CharterRegular.otf') format('opentype'),
+}
+
+body {
+    font-family: Charter;
+}
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    font-family: Charter, serif;
+    font-weight: normal;
+    margin: 30px 0px 10px 0px;
+    padding: 0;
+}
+
+.prefix, .segment, 
+.unchanging, .unchanged, 
+.changing, .changed, 
+.calculating, .calculated {
+    font-family: "Source Code Pro", monospace;
+    font-size: 100%;
+    padding: 2px 3px;}
+
+sub, sup { font-family: monospace;
+          letter-spacing: -1px;}    
+.segment {
+    border: 1px black solid;
+    }
+    
+.center {
+    text-align: center;
+    }
+    
+.unchanging { border-bottom: 1px #33f dotted;}
+.unchanged { border-top: 1px #33f dotted;}
+.blue-indicator { border-left: 1px #33f solid;}
+
+
+.changing { border-bottom: 1px #3f3 solid;}
+.changed { border-top: 1px #3f3 solid;}
+.green-indicator { border-left: 1px #3f3 solid;}
+
+
+.calculating { border-bottom: 1px #f33 solid;}
+.calculated { border-top: 1px #f33 solid;}
+.red-indicator { border-left: 1px #f33 solid;}
+
+table.proof {
+    border: 1px #ccc solid;
+}
+
+table.proof td { border: none;}
