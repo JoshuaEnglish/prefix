@@ -1,0 +1,91 @@
+===========
+Subtraction
+===========
+
+.. default-role:: prefix
+
+Subtraction can cause some headaches, because it is not commutative
+`= - 3 4` |rarr| `= -1` but `= - 4 3` |rarr| `= 1`. 
+
+The definition of Subtraction, as it is given in my source, is 
+:math:`(m - n) + n = m`, which translates to `+ - m n n` |sameas| `m`.
+
+Our basic substitution rule is `- a b` |sameas| `+ a ~b`. Be careful
+to never substitute `+ ~a b` for `- a b`. 
+
+.. note::
+
+    For our purposes, the `-` symbol is the binary operator for
+    subtraction. The `~` symbol is the unary operator for negation.
+    However, for negative numbers, I am using `-1`' `-2`, etc. I use
+    the `~` for negative variables or when negating a operator and
+    pair of operands.
+
+Basic Substitutions
+-------------------
+
+Subtraction is not commutative, but it can appear in Association 
+substitutions:
+
+`+ a - b c` |sameas| `- + a b c`
+
+Compare to the infix form: :math:`a + (b - c) = (a + b) - c`.
+
+In infix notation, :math:`a - (b + c) \ne (a - b) + c`. These
+are `- a + b c` and `+ - a b c` in prefix. Going from left to right,
+we could use the basic subtraction substitution rule to go from
+`- a + b c` to `+ a ~ + b c` and we don't have a rule for this yet.
+
+Going from right to left we can
+turn `+ - a b c` into `+ + a ~b c`, which we could (through normal
+Association) get `+ a + ~b c`. 
+
+Let's deal with that `~ + b c` item. `~` is the unary negation, and
+to get rid of it and simplify our statements we need to bury the 
+negative somewhere else. If you translate this into infix, you'll 
+see that this is a distribution problem:
+
+.. list-table:: Unary Negative before Addition
+    :widths: 1 10 4
+    :class: proof
+    :name: unary-negative-before-addition
+    
+    * - 
+      - `~ + a b`
+      - Given
+    * - 
+      - `* -1 + a b`
+      - Multiplication by -1
+    * -
+      - `+ * -1 a * -1 b`
+      - Distribution
+    * -
+      - `+ ~a ~b`
+      - Multiplication by -1 (twice)
+
+The reverse is true as well, so `~ + b c` |sameas| `+ ~b ~c`.
+
+We can now solve our `+ a ~ + b c` problem. This becomes
+`+ a + ~b ~c` and that is not the same as `+ a + ~b c`. 
+So we have shown that `- a + b c` cannot be substituted 
+for `+ - a b c`.
+
+Multiplying Negative Numbers
+----------------------------
+
+Here are the rules for multiplication with negative numbers.
+
+.. list-table:: Multiplying Negatives
+    :widths: 1 6
+    :stub-columns: 1
+    :name: multiplying-negatives
+    
+    * - Commutative
+      - `* ~a b` |sameas| `* a ~b` |sameas| `~ * a b`
+    * - Distribution
+      - `* ~a ~b` |sameas| `* a b`
+ 
+
+
+
+ 

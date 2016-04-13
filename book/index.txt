@@ -18,6 +18,10 @@ Contents:
 
    whatisprefix
    properties
+   multiplicativeproperties
+   subtraction
+   division
+   singlevariable
 
 
 Indices and tables

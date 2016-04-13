@@ -35,7 +35,8 @@ div.body h6 {
 .calculating, .calculated {
     font-family: "Source Code Pro", monospace;
     font-size: 100%;
-    padding: 2px 3px;}
+    padding: 2px 3px;
+    white-space: nowrap;}
 
 sub, sup { font-family: monospace;
           letter-spacing: -1px;}    

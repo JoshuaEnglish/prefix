@@ -29,3 +29,6 @@
 .. |rarr| unicode:: U+2192
 .. |/| unicode:: U+2044
 .. |c1| unicode:: U+2780
+.. |c2| unicode:: U+2781
+
+.. default-role:: prefix

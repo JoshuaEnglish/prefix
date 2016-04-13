@@ -2,17 +2,254 @@
 Multiplicative Properties of 0 and -1
 ======================================
 
+.. default-role:: prefix
+
+Multiplying by 0
+----------------
+
 To demonstrate how to use the properties and how this book will
 prove things, let's start with a couple of basic proofs. We know
 that anything times 0 is 0, right? We can prove it:
 
-.. list-table:: A Proof
-    :widths: 7 3
+.. list-table:: Multiply by 0
+    :widths: 1 10 4
+    :class: proof
+    :name: mult-by-0
+
+    * -
+      - :prefix:`=` :unchanging:`* a 0` :prefix:`0`
+      - Given
+    * -
+      - :prefix:`= +` :unchanged:`* a 0` :changing:`0` :prefix:`0`
+      - Identity of +
+    * -
+      - `= + * a 0` :changed:`+ a ~a` `0`
+      - Identity of +
+    * - |c1|
+      - `= + + * a 0 a ~a 0`
+      - Association
+    * - 
+      - `= + + * a 0 * a 1 ~a 0`
+      - Identity of *
+    * -
+      - `= + * a + 0 1 ~a 0`
+      - Distribution
+    * -
+      - `= + * a 1 ~a 0`
+      - Calculation
+    * -
+      - `= + a ~a 0`
+      - Identity of *
+    * -
+      - `= 0 0`
+      - Inverse of +
+    * - |there4|
+      - `= * a 0 0`
+      - |QED|
+      
+This means we can add `* a 0` |sameas| `0` to 
+our list of substitution rules. We'll call it **Multiply by 0** or :strong:`*0` in
+further proofs.
+
+This is also an example of using one substitution rule with more than a single
+variable. Look at the Association Substitution: `+ + A B C` |sameas| `+ A + B C`.
+In the line marked |c1|. In this case `A` is `* a 0`, `B` is `+ a ~a`, and 
+`C` is `0`. That final `0`, though, wouldn't land on the same side of the equation
+in standard infix notation (it would look like 
+:math:`(a * 0) + (a + -a) = 0` before using association and 
+:math:`((a * 0) + a) + ~a = 0` after). So the infix translation shows it
+works and is fine, right?
+
+Not satisfied? 
+
+Fine. Let's try it without ever using that final `0`.
+
+.. list-table:: Multiply by 0
+    :widths: 1 10 4
+    :class: proof
+    :name: mult-by-0-clean
+
+    * -
+      - `= * a 0 0`
+      - Given
+    * -
+      - `= + * a 0 0 0`
+      - Identity of +
+    * -
+      - `= + * a 0 + a ~a 0`
+      - Inverse of +
+    * - |c1|
+      - `= + + a ~a * a 0 0`
+      - Commutative +
+    * - 
+      - `= + + ~a a * a 0 0`
+      - Commutative +
+    * - 
+      - `= + + ~a * a 1 * a 0 0`
+      - Identity of *
+    * - |c2|
+      - `= + ~a + * a 1 * a 0 0`
+      - Association
+    * - 
+      - `= + ~a * a + 1 0 0`
+      - Distribution 
+    * - 
+      - `= + ~a * a 1 0`
+      - Calculation
+    * - 
+      - `= + ~a a 0`
+      - Identity of *
+    * - 
+      - `= 0 0`
+      - Inverse of +
+    * - |there4|
+      - `= * a 0 0`
+      - |QED|
+
+.. note:: Comments
+
+    ====  ========================================
+    |c1|  We are moving items around to avoid ever 
+          manipulating that final `0`.
+    |c2|  Now when we use association we are not 
+          relying on that final `0`.
+    ====  ========================================
+
+This has also taken us two more lines to arrive at
+the final conclusion. To avoid
+this confusion of using the "other side" of the equation
+in our substitutions, we may decide to write the whole thing
+using the symmetrical property of equality, so our proof would
+start like:
+
+.. list-table:: Multiply by 0
+    :widths: 1 10 4
     :class: proof
 
-    * - :prefix:`=` :unchanging:`× a 0` :prefix:`0`
+    * -
+      - `= 0 * a 0`
       - Given
-    * - :prefix:`= +` :unchanged:`× a 0` :changing:`0` :prefix:`0`
+    * -
+      - `= 0 + * a 0 0`
       - Identity of +
-    * - |there4| :prefix:`= 0 0`
+
+This form will hamper us later. So for now, leave the trailing
+item.
+
+Still, it would be nice to get rid of those two lines, or shorten
+the entire proof. Since there was a lot of commutative swaps going on
+and the entire proof hinges on the Association-Distribution-Calculation
+logic, maybe we can get there faster.
+
+.. list-table:: Multiply by 0, take 3
+    :widths: 1 10 4
+    :class: proof
+    :name: mult-by-0-alternate
+    
+    * -
+      - `= * a 0 0`
+      - Given
+    * -
+      - `= + * a 0 0 0`
+      - Identity of +
+    * - |c1|
+      - `= + 0 * a 0 0`
+      - Commutative +
+    * -
+      - `= + + a ~a * a 0 0`
+      - Identity of +
+    * - 
+      - `= + + ~a a * a 0 0`
+      - Commutative +
+    * - 
+      - `= + + ~a * a 1 * a 0 0`
+      - Identity of *
+    * - 
+      - `= + ~a + * a 1 * a 0 0`
+      - Association
+    * - 
+      - `= + ~a * a + 1 0 0`
+      - Distribution 
+    * - 
+      - `= + ~a * a 1 0`
+      - Calculation
+    * - 
+      - `= + ~a a 0`
+      - Identity of *
+    * - 
+      - `= 0 0`
+      - Inverse of +
+    * - |there4|
+      - `= * a 0 0`
       - |QED|
+      
+This didn't shorten anything, but hopefully the general
+plan is clean. Use the Identity and Inverse properties
+to add to the statment. Use Association and Distribution
+to manipulate. Use Calculation and Identity and Inverse
+to shorten the statement.
+
+Multiplying by -1
+-----------------
+
+This next proof is similar, and will prodive us a shortcut
+of `* a -1` |sameas| `~a`. We'll use the same tactic and 
+our new rule:
+
+.. list-table:: Multiply by -1
+    :widths: 1 10 4
+    :class: proof
+    :name: mult-by-minus-1
+    
+    * -
+      - `= * a -1 ~a`
+      - Given
+    * - 
+      - `= + 0 * a -1 ~a`
+      - Identity of +
+    * -
+      - `= + + a ~a * a -1 ~a`
+      - Inverse of +
+    * -
+      - `= + + ~a a * a -1 ~a`
+      - Commutative +
+    * - 
+      - `= + ~a + a * a -1 ~a`
+      - Association
+    * -
+      - `= + ~a + * a 1 * a -1 ~a`
+      - Identity *
+    * -
+      - `= + ~a * a + 1 -1 ~a`
+      - Distribution (Factor)
+    * - 
+      - `= + ~a * a 0 ~a`
+      - Calculation
+    * - |c1|  
+      - `= + ~a 0 ~a`
+      - **Multiply by 0**
+    * - 
+      - `= ~a ~a`
+      - Identity of +
+    * - |there4|
+      - `= * a -1 ~a`
+      - |QED|
+      
+Now we have `* a -1` |sameas| `~a` and thanks to the Commutative
+property, we have `~a` |sameas| `* -1 a` |sameas| `* a -1`.
+
+I remember from my early algebra classes that the strict proof 
+required the Identity of Addition to be strictly `+ a 0` |sameas| `a`
+and if I wanted to get to `+ 0 a` I had to have a separate line
+in my proof with "Commutative Property of Addition" written as my
+reason. 
+
+But I accept the properties as they are, so the I accept `a` becoming
+either `+ a 0` or `+ 0 a` or `* a 1` or `* 1 a` as needed. The idea
+is to provo something significant. These shortcuts seem to flow naturally
+and I really want proofs in this book to be simple and understandable.
+
+To that end, I will probably start to take "obvious" shortcuts, such
+as combining two changes in one line (Identity and Inverse seem to pair
+up nicely so far.)
+

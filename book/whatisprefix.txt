@@ -12,7 +12,7 @@ there).
 In prefix notation, the operator comes first: :prefix:`+ x 3` and
 :prefix:`* 5 m`. 
 
-*Operators* are the familiar ones: `+ - × ÷ ^`.
+*Operators* are the familiar ones: `+ - * ÷ ^`.
 
 *Operands* are variables(`a b m n x y...`), numbers, or an operator
 with its operands.
@@ -41,13 +41,13 @@ comes first**. It's that simple. Here are some examples:
     * - :math:`1 + 2`
       - :prefix:`+ 1 2`
     * - :math:`1 * 2`
-      - :prefix:`× 1 2`
+      - :prefix:`* 1 2`
     * - :math:`3x`
-      - :prefix:`× 3 x` |c1|
+      - :prefix:`* 3 x` |c1|
     * - :math:`3x + 2`
-      - :prefix:`× ? 3 x 2`
+      - :prefix:`* ? 3 x 2`
     * - :math:`3(x + 2)`
-      - :prefix:`× 3 + x 2`
+      - :prefix:`* 3 + x 2`
  
 To practice translating from infix to prefix, give yourself plenty
 of room to add items to both sides of your statement. You may also
@@ -63,10 +63,10 @@ This is here only to check styles.
     :widths: 7 3
     :class: proof
 
-    * - :prefix:`=` :unchanging:`× a 0` :prefix:`0`
+    * - :prefix:`=` :unchanging:`* a 0` :prefix:`0`
       - Given
-    * - :prefix:`= +` :unchanged:`× a 0` :changing:`0` :prefix:`0`
+    * - :prefix:`= +` :unchanged:`* a 0` :changing:`0` :prefix:`0`
       - Identity of +
-    * - |there4| :prefix:`× a 0 0`
+    * - |there4| :prefix:`* a 0 0`
       - |QED|
 

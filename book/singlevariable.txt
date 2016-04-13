@@ -1,0 +1,192 @@
+==================================
+Solving Single Variable Statements
+==================================
+
+Finally, we have enough tools to start looking at real algebra.
+We are going to tackle going from :segment:`= + * 3 x 2 14` 
+to :segment:`= x 4`. We need some basic rules, and let's review
+this in infix notation
+
+:math:`3x + 2 = 14 \to 3x = 12 \to x=4`
+
+.. list-table:: Single Variable Statements
+    :widths: 1 10 10
+    :class: proof
+    :name: infix-single-variable
+
+    * -
+      - :math:`3x + 2 = 14`
+      - Given
+    * -
+      - :math:`3x+2-2 = 14-2`
+      - Addition Property of Equality
+    * -
+      - :math:`3x = 12`
+      - Calculation
+    * -
+      - :math:`\frac{3x}{3} = \frac{12}{3}`
+      - Multiplication Property of Equality
+    * -
+      - :math:`x = 4`
+      - Calculation
+      
+The Addition and Multiplication Properties of Equality point
+to a fundamental rule of algebra: Balancing changes. What you 
+do to one side of the equation you have to do the other side 
+of the equation.
+
+In prefix, we don't have two sides of the equation, only two
+"operands" of the `=` symbol. In infix, we can say
+:math:`a=b \to a+c=b+c` or :math:`a=b \to ac=bc`. These can 
+exist in prefix, but it seems a little dangerous. `= a b` |sameas|
+`= + a c + b c` is straightforward, but to add 5 to "both sides"
+of `= * 2 + x 1 * 3 + x 3`? [#answer]_
+
+Dual Operation Transformations
+------------------------------
+
+I have no nicer way of describing this next substitution. Take 
+`= + x 3 4` and solve for `x` in your head. You should get `1`.
+This statement could also be written as `= 4 + x 3`, but that gets
+us no closer to the answer `= x 1`.
+
+Here's what it looks like in a strict transliteration of the infix:
+
+.. list-table:: Single Variable Statements
+    :widths: 1 10 10
+    :class: proof
+    :name: prefix-single-variable
+
+    * -
+      - `= + * 3 x 2 14`
+      - Given
+    * -
+      - `= - + * 3 x 2 2 - 14 2`
+      - Addition Property of Equality
+    * -
+      - `= - + * 3 x 2 2 12`
+      - Calculation
+    * - 
+      - `= + * 3 x - 2 2 12`
+      - Association
+    * -
+      - `= + * 3 x 0 12`
+      - Calculation
+    * - 
+      - `= * 3 x 12`
+      - Identity of +
+    * -
+      - `= ÷ * 3 x 3 ÷ 12 3`
+      - Multiplication Property of Equality
+    * -
+      - `= x 4`
+      - Cancelling the Coefficient, Calculation
+
+The great thing about math, though, is we can prove certain things
+work all the time, no matter what. Let's determine our first real 
+manipulation on "both sides" of the equality. The goal is to solve
+for `x`.
+
+.. list-table:: Addition Transformation
+    :widths: 1 10 10
+    :class: proof
+    :name: addition-transformation
+
+    * -
+      - `= + x A B`
+      - Given
+    * -
+      - `= - + x A A - B A`
+      - Addition Property of Equality
+    * -
+      - `= + x - A A - B A`
+      - Association
+    * -
+      - `= + x O - B A`
+      - Calculation
+    * -
+      - `= x - B A`
+      - Identity of +
+    * - |there4|
+      - `= + x A B` |sameas| `= x - B A`
+      - |QED|
+
+In other words, when we have `= +` and three more items, we can swap `+` and
+the first item, changing the `+` to `-`, and swap the last two items.
+
+Let's call this rule **Transform +**.
+
+Can this rule work with subtraction? Yes it can.
+
+.. list-table:: Subtraction Transformation
+    :widths: 1 10 10
+    :class: proof
+    :name: subtraction-transformation
+
+    * -
+      - `= - x A B`
+      - Given
+    * -
+      - `= + x ~A B`
+      - Definition of Subtraction
+    * -
+      - `= x - B ~A`
+      - Transform +
+    * -
+      - `= x + B A`
+      - Subtraction
+
+The general pattern holds. Swap the first two (ignoring `=`) and replace
+`+` with `-` or `-` with `+` and swap the last two.
+
+The infix form should be easy to spot: :math:`x + A = B \to x=B-A`.
+
+So the same trick works with multiplication and division
+
+`= * x A B` |sameas| `= x / B A`
+
+`= ÷ x A B` |sameas| `= x * B A`
+
+If you want to take shortcuts with commutativity, you don't even need
+to swap the last two items when starting with subtraction or division.
+
+Now let's try our sample problem again, using our new tools:
+
+.. list-table:: Single Variable Statements
+    :widths: 1 10 10
+    :class: proof
+    :name: prefix-single-variable
+
+    * -
+      - `= + * 3 x 2 14`
+      - Given
+    * -
+      - `= * 3 x - 14 2`
+      - Transform +
+    * - |c1|
+      - `= * x 3 - 14 2`
+      - Commutative
+    * -
+      - `= x / - 14 2 3`
+      - Transform *
+    * -
+      - `= x / 12 3`
+      - Calculation
+    * - |c2|
+      - `= x 4`
+      - Solved for `x`
+      
+.. note::
+
+    ====  =======================================================
+    |c1|  This is one of those annoying steps where commutativity
+          could be assumed, but I spelled it out.
+    |c2|  Yes, I could have collapsed both calculations
+    ====  =======================================================
+     
+
+
+
+.. rubric:: Footnotes
+
+.. [#answer] `= + * 2 + x 1 5 * 3 + x 3 5`, but that's not obvious, is it?

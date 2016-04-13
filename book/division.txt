@@ -1,0 +1,33 @@
+======================
+Division and Fractions
+======================
+
+The relationship between division and fractions is obvious,
+so let's get this over with.
+
+`÷ A B` |sameas| `* A / 1 B` |sameas| `* A` :sup:`1` |/| :sub:`A`
+
+There is one handy rule that follows from this and the Identity of 
+Multipliation:
+
+`÷ * B A B` |sameas| `A`. Let's call this **Cancelling the Coefficient**.
+
+Fractions
+---------
+
+It is easier to break fractions into division operations. Maybe.
+That's what I'm doing here.
+
+.. list-table:: Fractions
+    :widths: 1 6
+    :stub-columns: 1
+    :name: fractions
+    
+    * - Multiplying Fractions
+      - `* ÷ A B ÷ C D` |sameas| `÷ * A C * B D`
+    * - Adding Fractions
+      - `+ ÷ A B ÷ C D` |sameas| `+ ÷ * A D * B D ÷ * B C * B D` 
+        |sameas| `÷ + * A D * C B * B D`
+        
+The third form results from distribution.
+
