@@ -11,6 +11,8 @@ To demonstrate how to use the properties and how this book will
 prove things, let's start with a couple of basic proofs. We know
 that anything times 0 is 0, right? We can prove it:
 
+.. index:: triple: property; multiplication; zero
+
 .. list-table:: Multiply by 0
     :widths: 1 10 4
     :class: proof
@@ -106,8 +108,10 @@ Fine. Let's try it without ever using that final `0`.
       - `= * a 0 0`
       - |QED|
 
-.. note:: Comments
+.. rst-class:: proof-notes
 
+    Notes:
+    
     ====  ========================================
     |c1|  We are moving items around to avoid ever 
           manipulating that final `0`.
@@ -195,6 +199,9 @@ Multiplying by -1
 This next proof is similar, and will prodive us a shortcut
 of `* a -1` |sameas| `~a`. We'll use the same tactic and 
 our new rule:
+
+.. index:: triple: property; multiplication; negative 1
+   
 
 .. list-table:: Multiply by -1
     :widths: 1 10 4

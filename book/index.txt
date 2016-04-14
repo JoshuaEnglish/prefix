@@ -22,6 +22,8 @@ Contents:
    subtraction
    division
    singlevariable
+   simpletransformation
+   glossary
 
 
 Indices and tables

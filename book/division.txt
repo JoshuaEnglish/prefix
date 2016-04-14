@@ -10,7 +10,22 @@ so let's get this over with.
 There is one handy rule that follows from this and the Identity of 
 Multipliation:
 
-`÷ * B A B` |sameas| `A`. Let's call this **Cancelling the Coefficient**.
+.. dividend ÷ divisor = quotient (+ remainder)
+.. ÷ dividend divisor |sameas| quotient
+
+`÷ * B A B` |sameas| `A`. Let's call this **Cancelling the Divisor**.
+
+Association
+-----------
+
+Just like `+ a - b c` |sameas| `- + a b c` for subtraction, the same holds
+for division: `* a ÷ b c` |sameas| `÷ * a b c`. This is :math:`a\frac{b}c=\frac{ab}c`
+in infix notation.
+
+But `÷ a * b c` is not the same as `* ÷ a b c`. This would imply
+:math:`\frac{a}{bc} = \frac{a}{b}c` and this is not the case.
+
+
 
 Fractions
 ---------

@@ -2,16 +2,34 @@
 Subtraction
 ===========
 
-.. default-role:: prefix
-
 Subtraction can cause some headaches, because it is not commutative
 `= - 3 4` |rarr| `= -1` but `= - 4 3` |rarr| `= 1`. 
 
-The definition of Subtraction, as it is given in my source, is 
-:math:`(m - n) + n = m`, which translates to `+ - m n n` |sameas| `m`.
+Basic Substitutions
+-------------------
 
-Our basic substitution rule is `- a b` |sameas| `+ a ~b`. Be careful
-to never substitute `+ ~a b` for `- a b`. 
+.. index:: ! subtraction
+
+Our basic subtraction substitution rule is
+
+.. rst-class:: prefix
+
+   `- a b` |sameas| `+ a ~b` 
+   
+Be careful to never substitute `+ ~a b` for `- a b`. 
+
+.. minuend - subtrahend = difference 
+.. - minuend subtrahend |sameas| difference
+
+.. index:: ! Cancelling the Subtrahend
+
+There is a shortcut we can use, called **Cancelling the Subtrahend**:
+
+.. rst-class:: prefix
+
+   `- + B A B` |sameas| `A`
+
+.. index:: ! opposites
 
 .. note::
 
@@ -20,14 +38,20 @@ to never substitute `+ ~a b` for `- a b`.
     However, for negative numbers, I am using `-1`' `-2`, etc. I use
     the `~` for negative variables or when negating a operator and
     pair of operands.
+    
+    We can call `~a` the *Opposite* of `a` and vice-versa.
 
-Basic Substitutions
+More Substitutions
 -------------------
 
 Subtraction is not commutative, but it can appear in Association 
 substitutions:
 
-`+ a - b c` |sameas| `- + a b c`
+.. index:: triple: associative; property; subtraction
+ 
+.. rst-class:: prefix
+
+   `+ a - b c` |sameas| `- + a b c`
 
 Compare to the infix form: :math:`a + (b - c) = (a + b) - c`.
 
@@ -45,10 +69,14 @@ to get rid of it and simplify our statements we need to bury the
 negative somewhere else. If you translate this into infix, you'll 
 see that this is a distribution problem:
 
-.. list-table:: Unary Negative before Addition
-    :widths: 1 10 4
+.. index:: 
+   pair: addition; opposites
+   ! Addition of Opposites
+
+.. list-table:: Addition of Opposites
+    :widths: 1 10 10
     :class: proof
-    :name: unary-negative-before-addition
+    :name: addition-of-opposites
     
     * - 
       - `~ + a b`
@@ -75,10 +103,12 @@ Multiplying Negative Numbers
 
 Here are the rules for multiplication with negative numbers.
 
-.. list-table:: Multiplying Negatives
+.. index:: pair: multiplication; opposites
+
+.. list-table:: Multiplying Opposites
     :widths: 1 6
     :stub-columns: 1
-    :name: multiplying-negatives
+    :name: multiplying-opposites
     
     * - Commutative
       - `* ~a b` |sameas| `* a ~b` |sameas| `~ * a b`

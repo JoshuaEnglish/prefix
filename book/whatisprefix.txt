@@ -2,8 +2,6 @@
 What is Prefix Notation?
 ========================
 
-.. default-role:: prefix
-
 The standard notation of algebra is infix notation, meaning the 
 operator is inbetween its operands: :math:`x + 3` or :math:`5m`
 (in the latter, the multiplication sign is omitted, but it is 
@@ -51,22 +49,36 @@ comes first**. It's that simple. Here are some examples:
  
 To practice translating from infix to prefix, give yourself plenty
 of room to add items to both sides of your statement. You may also
-need to create a 
+need to create a ...
+
+Translating from prefix to infix
+--------------------------------
+
+Parentheses are your friends.
 
 A Sample Proof
 ---------------
 
 This is here only to check styles. 
-:prefix:`+ a 0` |sameas| :prefix:`a` |sameas| :prefix:`+ 0 a`
+`+ a 0` |sameas| `a` |sameas| `+ 0 a`
 
 .. list-table:: A Proof
-    :widths: 7 3
+    :widths: 1 10 10
     :class: proof
 
-    * - :prefix:`=` :unchanging:`* a 0` :prefix:`0`
+    * - |c1|
+      - `=` :unchanging:`* a 0` `0`
       - Given
-    * - :prefix:`= +` :unchanged:`* a 0` :changing:`0` :prefix:`0`
+    * -
+      - `= +` :unchanged:`* a 0` :changing:`0` `0`
       - Identity of +
-    * - |there4| :prefix:`* a 0 0`
+    * -
+      - |there4| `* a 0 0`
       - |QED|
 
+.. rst-class:: proof-notes
+
+    ====  ===========================================================
+    |c1|  This is an example of a note that refers to a specific line
+          in the proof.
+    ====  ===========================================================

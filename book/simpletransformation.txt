@@ -1,0 +1,31 @@
+===================================
+Exploring the Simple Transformation
+===================================
+
+We have our basic transformations for each of our four 
+operators. This part of our discussion treats these variables
+as single entities, so they are in lower-case. 
+
+===========  =====================================================
+Transform +  `= + x a b` |sameas| `= x - b a`
+Transform -  `= - x a b` |sameas| `= x + b a` |sameas| `= x + a b`
+Transform *  `= * x a b` |sameas| `= x ÷ b a`
+Transform ÷  `= ÷ x a b` |sameas| `= x * b a` |sameas| `= x * a b`
+===========  ===================================================== 
+
+Each of our original statements are already solved for `b`
+by the :ref:`Symmetry of Equality <symmetry-prop-of-equality>` rule. 
+The transformation solves for `x`.
+
+To solve for `a`, you can use the following tactics:
+
+===========  =======================  ===========
+Start        Steps                    Result
+===========  =======================  ===========
+`= + x a b`  Commute and Transform    `= a - b x`
+`= - x a b`  Transform, Commute,      `= a - x b`
+             Transform, use Symmetry  
+`= * x a b`  Commute and Transform    `= a ÷ b x`
+`= ÷ x a b`  Transform, Commute,      `= a ÷ x b`
+             Transform, use Symmetry          
+===========  =======================  ===========      

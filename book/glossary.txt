@@ -1,0 +1,13 @@
+=======================
+Glossary
+=======================
+
+.. glossary::
+
+    operator
+        A mathematical action that takes one or two things and returns somethnig else
+        
+    operand
+        A thing fed to operators
+        
+    

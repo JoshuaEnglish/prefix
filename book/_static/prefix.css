@@ -67,3 +67,8 @@ table.proof {
 }
 
 table.proof td { border: none;}
+
+table.proof-notes {
+    margin: 20px 0px;
+    padding: 10px 30px;
+}

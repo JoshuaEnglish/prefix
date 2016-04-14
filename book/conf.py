@@ -31,6 +31,7 @@ sys.path.insert(0, os.path.abspath('.'))
 # ones.
 extensions = [
     'sphinx.ext.mathjax',
+    #'sphinx.ext.imgmath',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -357,3 +358,7 @@ epub_exclude_files = ['search.html']
 
 # If false, no index is generated.
 #epub_use_index = True
+
+
+# -- Options for math processing ------------------------------------------
+imgmath_image_format = 'svg'
