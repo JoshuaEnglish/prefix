@@ -1,0 +1,89 @@
+
+.. _master_rule_list:
+
+====================
+The Master Rule List
+====================
+
+
+This page lists all the rules in both prefix and infix translations.
+
+.. list-table:: Master Rule List
+    :widths: 1 2 2
+    :header-rows: 1
+    :stub-columns: 1
+    :name: master-rule-list
+    
+    * - Name
+      - Prefix
+      - Infix
+    * - Identity +
+      - `+ A 0` |sameas| `A` |sameas| `+ 0 A` 
+      - :math:`A+0=A=0+A`
+    * - Identity *
+      - `* 1 A` |sameas| `A` |sameas| `* A 1`
+      -
+    * - Inverse +
+      - `+ A ~ A` |sameas| `0` |sameas| `+ A -A`
+      -
+    * - Inverse *
+      - `* A` :sup:`1` |/| :sub:`A` |sameas| `1` |sameas| `* A ÷ 1 A`
+      -
+    * - Commutative +
+      - `+ A B` |sameas| `+ B A`
+      - :math:`A+B=B+A`
+    * - Commutative *
+      - `* A B` |sameas| `* B A`
+      - :math:`AB=BA`
+    * - Associative +
+      - `+ + A B C` |sameas| `+ A + B C`
+      - :math:`(A+B)+C=A+(B+C)`
+    * - Associative -
+      - `+ A - B C` |sameas| `- + A B C`
+      - :math:`A+(B-C)=(A+B)-C`
+    * - Associative *
+      - `* * A B C` |sameas| `* A * B C`
+      - :math:`(AB)C=A(BC)`
+    * - Associative ÷
+      - `* a ÷ b c` |sameas| `÷ * a b c`
+      - :math:`a\frac{b}c=\frac{ab}c`
+    * - Distributive +
+      - `* A + B C` |sameas| `+ * A B * A C`
+      - :math:`A(B+C)=AB+AC`
+    * - Distributive -
+      - `* A - B C` |sameas| `- * A B * A C`
+      - :math:`A(B-C)=AB-AC`
+    * - Multiply by 0
+      - `* A 0` |sameas| `0`
+      - :math:`0*a=0`
+    * - Multiply by -1
+      - `* A -1` |sameas| `~A`
+      - :math:`-1*A=-A`
+    * - Subtraction
+      - `- A B` |sameas| `+ A ~B`
+      - :math:`A-B=A+-B`
+    * - Cancel the Subtrahend
+      - `- + B A B` |sameas| `A`
+      - :math:`(B+A)-B=A`
+    * - Multiplying Opposites
+      - `~ * A B` |sameas| `* ~A B` |sameas| `* A ~B`
+      - :math:`-AB=(-A)B=A(-B)`
+    * - Distributing Opposites
+      - `* ~A ~B` |sameas| `* A B`
+      - :math:`(-A)(-B) = AB`
+    * - Cancel the Divisor
+      - `÷ * B A B` |sameas| `A`
+      - :math:`\frac{AB}B=A`
+
+.. list-table:: Master Equality Rule List
+    :widths: 1 2 2
+    :header-rows: 1
+    :stub-columns: 1
+    :name: master-equality-rule-list     
+
+    * - Symmetry of Equality
+      - `= A B` |sameas| `= B A`
+      - :math:`A=B \leftrightarrow B=A`
+    * - Transitive Property of Equality
+      - `= A B ; = B C` |rarr| `= A C`
+      - :math:`A=B; B=C \rightarrow A=C`

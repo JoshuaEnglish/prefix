@@ -40,9 +40,16 @@ That's what I'm doing here.
     
     * - Multiplying Fractions
       - `* ÷ A B ÷ C D` |sameas| `÷ * A C * B D`
+    * - 
+      - `* A ÷ C D` |sameas| `÷ * A C D`
+    * - 
+      - `* ÷ A B C` |sameas| `÷ * A B C`
     * - Adding Fractions
       - `+ ÷ A B ÷ C D` |sameas| `+ ÷ * A D * B D ÷ * B C * B D` 
         |sameas| `÷ + * A D * C B * B D`
+    * - Subtracting Fractions
+      - `- ÷ A B ÷ C D` |sameas| `- ÷ * A D * B D ÷ * B C * B D` 
+        |sameas| `÷ - * A D * C B * B D`
         
 The third form results from distribution.
 

@@ -28,4 +28,9 @@ Start        Steps                    Result
 `= * x a b`  Commute and Transform    `= a ÷ b x`
 `= ÷ x a b`  Transform, Commute,      `= a ÷ x b`
              Transform, use Symmetry          
-===========  =======================  ===========      
+===========  =======================  ===========   
+
+The beauty of this simple transformation is that it automatically 
+handles the infix notation notion of balance. What is done to one
+side of the infix equation is done to the other side, and simplified
+in one step in prefix notation.   

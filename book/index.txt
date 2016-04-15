@@ -15,6 +15,7 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
 
    whatisprefix
    properties
@@ -23,7 +24,17 @@ Contents:
    division
    singlevariable
    simpletransformation
+   exponents
+   monomials
+   binomials
+   
+Reference:
+
+.. toctree::
+   :maxdepth: 1
+   
    glossary
+   masterrulelist
 
 
 Indices and tables

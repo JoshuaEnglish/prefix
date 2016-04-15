@@ -81,7 +81,7 @@ Here's what it looks like in a strict transliteration of the infix:
       - `= * 3 x 12`
       - Identity of +
     * -
-      - `= ? * 3 3 ? x 12 3`
+      - `= ÷ * 3 3 ? x 12 3`
       - Multiplication Property of Equality
     * -
       - `= x 4`

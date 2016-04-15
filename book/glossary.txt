@@ -2,12 +2,52 @@
 Glossary
 =======================
 
+All of the examples on this page are in prefix notation unless obviously
+marked as infix.
+For a comparison of prefix to infix, please see :ref:`master-rule-list`.
+
 .. glossary::
+    :sorted:
 
     operator
-        A mathematical action that takes one or two things and returns somethnig else
-        
     operand
-        A thing fed to operators
+        `operator operand operand` |sameas| `result`
+                 
+    addend
+    sum
+        `+ addend addend` |sameas| `sum`
         
+        There is a rare term *augend* which is the first item in addition.
     
+    minuend
+    subtrahend
+    difference
+        `- minuend subtrahend` |sameas| `difference`
+    
+    dividend
+    divisor
+    quotient
+        `÷ dividend divisor` |sameas| `quotient`
+    
+    factor
+    multiplier
+    multiplicand
+    product
+        `* multiplier multiplicand` |sameas| `product`
+        
+        Also `* factor factor` |sameas| `product`
+    
+    monomial
+        In infix notation, this is a coefficient multiplied by any number
+        of variables raised to individual powers. 
+        
+        In prefix, this is a string of at least five symbols: `* coefficient ^ variable exponent`
+        
+    binomial
+        The sum or difference of two monomials
+        
+    trinomial
+        The sum or difference between three monomials
+        
+    polynomial
+        The sum or difference of at least 2 monomials

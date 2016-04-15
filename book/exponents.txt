@@ -1,0 +1,144 @@
+===========
+Exponents
+===========
+
+.. index:: ! exponentation
+
+Before moving on to polynomials, which take up the bulk of most
+algebra textbooks, we need tools to manage exponents.
+
+The basic form is `^ a b` (infix: :math:`a^b`) 
+
+The `^` symbol is not an operator like addition and multiplication.
+
+It looks like one, though. 
+
+It looks like it has an identity element: `^ a 1` |sameas| `a`.
+
+It looks like it has an inverse element: `^ a 0` |sameas| `1`.
+
+These aren't the same as the Identity Property or Inverse Property
+of multiplication, despite their appearances.
+
+The Identity Element of an operation must return an operand unchanged,
+that is, `= operator operand identity operand`. This is the role of `0` and `1`
+in Addition and Multiplication, respectively. The inverse element must
+be unique for each operand and return the identity element:
+`= operator operand unique-opposite identity-element`.
+
+The apparent inverse element `0` is not unique for any operand.
+
+That's where Exponentation stops even looking like an operator. Exponentation is neither commutative 
+(`^ 2 3` :math:`\ne` `^ 3 2) nor associative (`^ ^ 3 5 7` :math:`\ne` `^ 3 ^ 5 7`) 
+[#whynot]_.
+
+
+
+The vocabulary of exponents is:
+
+.. rst-class:: prefix
+
+    ^ base power
+    
+So `= ^ 2 3 8` and `= ^ 3 2 9` are both true.    
+
+Exponents as Shortcuts
+----------------------
+
+Exponents are shortcuts to multiplication (I'll complicate this idea later).
+
+Let's look at the basic pattern:
+
+=======  ===============
+`^ a 0`  `1`
+`^ a 1`  `a`
+`^ a 2`  `* a a`
+`^ a 3`  `* * a a a`
+`^ a 4`  `* * * a a a a`
+=======  ===============
+
+Exponents can also raise to negative powers:
+
+========  ===========
+`^ a -1`  `÷ 1 a`
+`^ a -2`  `÷ 1 ^ a 2`
+`^ a -3`  `÷ 1 ^ a 3`
+========  ===========
+
+
+Basic Rules
+-----------
+
+.. index::
+    pair: exponentation; product rule
+    pair: exponentation; quotient rule
+    pair: exponentation; power rule
+    pair: exponentation; negative power rule
+    pair: exponentation; zero power rule
+    pair: exponentation; identity property
+    
+    
+.. list-table:: Using Exponents
+    :widths: 2 2
+    :stub-columns: 1
+    :name: using-exponents
+    
+    * - Product Rule: same base
+      - `* ^ a m ^ a n` |sameas| `^ a + m n`
+    * - Product Rule: same power
+      - `* ^ a m ^ b m` |sameas| `^ * a b m`
+    * - Quotient Rule: same base
+      - `÷ ^ a m ^ a n` |sameas| `^ a - m n`
+    * - Quotient Rule: same power
+      - `÷ ^ a m ^ b m` |sameas| `^ ÷ a b m`
+    * - Power Rule
+      - `^ ^ a m n` |sameas| `^ a * m n`
+    * - Negative Power
+      - `^ a ~m` |sameas| `÷ 1 ^ a m`
+    * - Zero Rule
+      - `^ a 0` |sameas| `1`
+    * - Identity Rule
+      - `^ a 1` |sameas| `a`
+
+Solving Exponents
+------------------
+
+There is no easy dual operation transformation for exponentation. 
+There is the √ symbol, and it could be used in a transformation:
+
+.. rst-class:: prefix
+
+    = ^ a b c |sameas| = a √ c b
+
+But here the calculation would have to have a new symbol or a 
+new notation. One option is to use `±` or allow set notation. I
+will use `±` in the middle of proofs, and switch to set notation
+in conclusions. 
+
+.. list-table:: Sample Root Solution
+    :widths: 1 10 4
+    :class: proof
+    
+    * -
+      - `= ^ x 2 4`
+      - Given
+    * -
+      - `= x √ 4 2`
+      - Transform ^
+    * - 
+      - `= x ±2`
+      - Calculation
+    * - 
+      - `= x {-2 2}`
+      - Set Notation
+
+This may work out just fine. I don't like the idea of writing brackets
+in prefix notation.
+
+We will have to deal with these as we enter the world of monomials.
+      
+    
+.. rubric:: Footnotes
+
+.. [#whynot] `^ ^ 3 5 7` is 50,031,545,098,999,707. `^ 3 ^ 5 7` is a number with 37,276 *digits*.
+

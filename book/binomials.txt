@@ -1,0 +1,27 @@
+==========
+Binomials
+==========
+
+Binomials are the product or difference of two monomials. Let's see 
+if there are any special tricks.
+
+Simple Binomials Form
+----------------------
+
+Binomials look like either of the following lines:
+
+.. rst-class:: prefix
+
+    + * A B * C D
+    
+    - * A B * C D
+
+I
+
+Multiplying Binomials
+---------------------
+
+- `* + x 3 - x 2` [:math:`(x+3)(x-2)`]
+- `* + x 3 + x -2` [:math:`(x+3)(x+-2)`]
+- 
+

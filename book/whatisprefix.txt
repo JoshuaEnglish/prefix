@@ -51,16 +51,105 @@ To practice translating from infix to prefix, give yourself plenty
 of room to add items to both sides of your statement. You may also
 need to create a ...
 
+Translating from infix to prefix
+--------------------------------
+
+Parentheses are your friends. Lets take a simple statement
+and translate it. Then we'll take a more complicated statement
+and translate it.
+
+.. list-table:: Transforming from Infix to Prefix
+    :widths: 2 3
+    :header-rows: 1
+    
+    * - Step
+      - Description
+    * - :math:`2x-3=5`
+      - A simple equality
+    * - :math:`2*x-3=5`
+      - Make multiplication explicit
+    * - :math:`(2*x)-3=5`
+      - Add parentheses around binary operations
+    * - :math:`((2*x)-3)=5`
+      - Add more parentheses. 
+    * - `=((2*x)-3) 5`
+      - Move the equals sign to the front of the statement
+    * - `= ( (* 2 x)-3) 5`
+      - Turn the binary operations into prefix 
+    * - `= (- (* 2 x) 3) 5`
+      - Continue with the outer levels
+    * - `= - * 2 x 3 5`
+      - Remove parentheses
+      
+The order in which you transform parenthesis doesn't matter. Here
+is a longer version that displays innermost-out and outermost-in.
+
+.. list-table:: Transforming Infix to Prefix Again
+    :widths: 2 3
+    :header-rows: 1
+    
+    * - Step
+      - Description
+    * - :math:`2(x+1)=3(x-3)`
+      - A longer equality
+    * - :math:`2*(x+1)=3*(x-3)`
+      - Make multiplication explicit
+    * - :math:`(2*(x+1))=(3*(x-3))`
+      - Add parentheses around binary operations
+    * - `=(2*(x+1)) (3*(x-3))`
+      - Move the equals sign to the front
+    * - `=(2*(+ x 1)) (* 3 (x-3))`
+      - Innermost-out and Outermost-in
+    * - `=(* 2 (+ x 1)) (* 3 (- x 3))`
+      - 
+    * - `= * 2 + x 1 * 3 - x 3`
+      - Remove Parentheses
+      
 Translating from prefix to infix
 --------------------------------
 
-Parentheses are your friends.
+Again, parenthesis are your friends. The idea is
+to look for the easiest things where you can see
+an `operator operand operand` tuple and tuck them
+into parenthesis. Growing from there, get everything
+but the equals sign in parentheses.
+
+Let's use an example from an early proof:
+
+.. list-table:: Prefix to Infix
+    :widths: 2 3
+    
+    * - `= + ~a + * a 1 * a 0 0`
+      - Given
+    * - `= + ~a + (* a 1) (* a 0) 0`
+      - Add parentheses to the obvious binary operations, where you cane
+        easily spot the `operator operand operand` triple.
+    * - `= + ~a (+ (* a 1) (* a 0)) 0`
+      - Treating anything in parenthesis as an unit, expand
+        parentheses groups
+    * - `= (+ ~a (+ (* a 1) (* a 0))) 0`
+      - The equals sign can stand outside the parenthises, and if there
+        is a single item on the other side of the parentheses, you can stop
+    * - :math:`(+ ~a (+ (* a 1) (* a 0)))=0`
+      - Move the equals sign to the middle.
+    * - :math:`(+ ~a (+ (1a) (0a)))=0`
+      - Multiplication can be converted easily
+    * - :math:`(~a+((1a)+(0a)))=0`
+      - So can addition
+    * - :math:`(-a+((1a)+(0a)))=0`
+      - Replace `~` with `-` 
+    * - :math:`-a+1a+0a=0`
+      - Remove parentheses
+
+This step is part of a proof, which is why it ends up looking so strange.
+Proofs are frequently done by adding stuff to a statement, manipulating
+the longer statement, and then simplifying the statement. Adding stuff means
+multiplying by 1 or adding 0 in creative ways
+
 
 A Sample Proof
 ---------------
 
-This is here only to check styles. 
-`+ a 0` |sameas| `a` |sameas| `+ 0 a`
 
 .. list-table:: A Proof
     :widths: 1 10 10
@@ -82,3 +171,20 @@ This is here only to check styles.
     |c1|  This is an example of a note that refers to a specific line
           in the proof.
     ====  ===========================================================
+    
+Abstract Forms
+--------------
+
+As we are working with lists of operators, numbers, and variables, sometimes
+the relationships can become muddled. At face value, there is nothing
+wrong with writing `= + ~a + * a 1 * a 0 0` as `= (+ ~a (+ (* a 1) (* a 0))) 0`
+for clarity. Another technique is to use Abstract Forms, replacing parts of
+a statement with capital letters to see the correct form.
+
+In the discussion of monomials we will encounter `+ * 3 ^ x 2 * 5 ^ x 1` 
+and it will look like we can simplify this statement. We can't. (Translate
+to infix to see why. `^ x 2` is :math:`x^2`.) It looks a lot like one of our forms of distribution, namely
+`+ * A B * A C` but in reality it should be `+ * A B * C D`.
+
+However, we can take `- * 5 ^ y 3 * 3 ^ y 3` and work with it, because the 
+abstract form would be `- * A B * C B`. 

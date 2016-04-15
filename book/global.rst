@@ -29,6 +29,7 @@
 .. |QED| replace:: :prefix:`QED`
 .. |rarr| unicode:: U+2192
 .. |/| unicode:: U+2044
+.. |r| unicode:: U+221A
 .. |c1| unicode:: U+2780
 .. |c2| unicode:: U+2781
 
