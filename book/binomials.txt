@@ -2,26 +2,87 @@
 Binomials
 ==========
 
-Binomials are the product or difference of two monomials. Let's see 
+Binomials are the product or difference of two unlike monomials. Let's see 
 if there are any special tricks.
 
 Simple Binomials Form
 ----------------------
 
-Binomials look like either of the following lines:
+Binomials have many forms. Were going to look at a few
+examples. In the following table `v` stands for *variable*,
+`n` stands for *number*, `c` for *coefficient*, and `e` for
+*exponent*.
 
-.. rst-class:: prefix
+.. list-table:: Binomial Forms
+    :widths: 4 2
 
-    + * A B * C D
-    
-    - * A B * C D
+    * - Variable alone
+      -`+ v n` or `- v n`
+    * - Variable with coefficient and exponent
+      - `+ * c ^ v e n` or `- * c ^ v e n`
 
-I
 
 Multiplying Binomials
 ---------------------
 
-- `* + x 3 - x 2` [:math:`(x+3)(x-2)`]
-- `* + x 3 + x -2` [:math:`(x+3)(x+-2)`]
-- 
+Let's start with a simple example by calculating `* + x 3 - x 2`.
 
+At first it doesn't look  like we can do anything with this. Reviewing 
+our standard replacements, nothing matches this pattern of operators
+and operands.
+
+What we have is a Distribution soution.
+
+If we substitute `A` for `- x 2` and `B` for `x` and `C` for `3`,
+and rewrite the segment, we get `* + B C A` and after using 
+the commutitive property we get `* A + B C` which becomes
+`+ * A B * A C` after we distribute.
+
+.. list-table:: Multipyling Binomials
+    :widths: 1 10 10
+    :class: proof
+    :name: simple-binomial-multiplication
+
+    * -
+      - `* + x 3 - x 2` 
+      - Given
+    * -
+      - `+ * - x 2 x * - x 2 3` 
+      - Commutation and Distribution
+    * - 
+      - `+ - * x x * x 2 - * 3 x * 3 2` 
+      - Commutation and Distribution (twice)
+    * - 
+      - `+ - ^ x 2 * x 2 - * 3 x 6` 
+      - Exponentation; Calculation
+    * -
+      - `+ + ^ x 2 - * x 2 + * 3 x -6` 
+      - Subtraction; Subtraction
+    * -
+      - `+ + ^ x 2 * x -2 + * 3 x -6` 
+      - Multiplying Opposites
+    * -
+      - `+ ^ x 2 + * -2 x + * 3 x -6` 
+      - Association; Commutation
+    * - 
+      - `+ ^ x 2 + + * -2 x * 3 x -6` 
+      - Association
+    * - 
+      - `+ ^ x 2 + [* x + -2 3] -6` 
+      - Distribution
+    * - 
+      - `+ ^ x 2 + * x 1 -6` 
+      - Calculation
+    * -
+      - `+ ^ x 2 + x -6`
+      - Identity *
+    * -
+      - `+ + ^ x 2 x -6`
+      - Association
+      
+Either of the final two forms are fine. I like the last one, myself.
+
+This can be a lot of work, and multiplying any two binomials
+is going to look a lot like this. Let's try adding coefficents.
+
+`+ * c ^ v e n * c ^ v e n`

@@ -22,10 +22,10 @@ In prefix:
 
 .. rst-class:: prefix
 
-    * c ^ v p
+    * c ^ v e
     
 Using `c` for the coefficient, `v` for the variable, and 
-`p` for the power. 
+`e` for the exponent. 
 
 Monomials can also have multiple variable-power pairs. One 
 example is: `* 3 * ^ x 2 ^ y 4`.
