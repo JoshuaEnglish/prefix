@@ -1,0 +1,22 @@
+=================
+Associative Forms
+=================
+
+This page lists all the Associative Forms for various term lengths.
+
+While these charts show multiplication, the equivalent rules exist for
+addition, but you cannot mix addition and multiplication and use these forms.
+
+3 Terms
+-------
+
+`* * A B C` |sameas| `* A * B C`
+
+4 Terms
+-------
+`* * * A B C D` |sameas| `* * A B * C D` |sameas| `* A * B * C D` |sameas| 
+`* A * * B C D` |sameas| `* * A * B C D`
+
+5 Terms
+-------
+`* * * * A B C D E` |sameas| 

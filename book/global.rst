@@ -1,26 +1,29 @@
 .. role:: prefix
     :class: prefix
 
+.. role:: pi
+    :class: prefix strong
+
     
 .. role:: segment
     :class: segment
     
-.. role:: unchanging(prefix)
+.. role:: nchi(prefix)
     :class: unchanging
 
-.. role:: unchanged(prefix)
+.. role:: nchd(prefix)
     :class: unchanged
     
-.. role:: changing
+.. role:: chi(prefix)
     :class: changing
 
-.. role:: changed
+.. role:: chd(prefix)
     :class: changed
 
-.. role:: calculating
+.. role:: ci(prefix)
     :class: calculating
     
-.. role:: calculated
+.. role:: cd(prefix)
     :class: calculated
 
 .. |*| unicode:: U+00D7

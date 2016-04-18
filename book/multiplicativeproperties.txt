@@ -19,13 +19,13 @@ that anything times 0 is 0, right? We can prove it:
     :name: mult-by-0
 
     * -
-      - :prefix:`=` :unchanging:`* a 0` :prefix:`0`
+      - `= * a 0 0`
       - Given
     * -
-      - :prefix:`= +` :unchanged:`* a 0` :changing:`0` :prefix:`0`
+      - `= +` :nchd:`* a 0` :chi:`0` `0`
       - Identity of +
     * -
-      - `= + * a 0` :changed:`+ a ~a` `0`
+      - `= + * a 0` :chd:`+ a ~a` `0`
       - Identity of +
     * - |c1|
       - `= + + * a 0 a ~a 0`

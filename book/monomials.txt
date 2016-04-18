@@ -52,3 +52,163 @@ the following shows:
 We don't have a rule to handle this abstracted form. We can take 
 `+ * 3 ^ x 2 * 5 ^ x 2` and work with it, because the 
 abstract form would be `- * A B * C B`. 
+
+
+Multipyling Monomials
+---------------------
+
+This will be a handy series of shortcuts to multiply two monomials.
+
+
+.. list-table:: Multiplying two Monomials with the same single variable
+    :widths: 1 10 10
+    :class: proof
+    :name: monomial-by-monomial-same-variable
+    
+    * - |c1|
+      - `* * a ^ v e * b ^ v f`
+      - Given
+    * - 
+      - `* a * ^ v e * b ^ v f`
+      - Association
+    * -
+      - `* a * * ^ v e b ^ v f`
+      - Association
+    * -
+      - `* a * * b ^ v e ^ v f`
+      - Commutative
+    * -
+      - `* a * b * ^ v e ^ v f`
+      - Association
+    * -
+      - `* * a b * ^ v e ^ v f`
+      - Association
+    * - |c2|
+      - `* * a b ^ v + e f`
+      - Exponentation Product Rule
+    
+ 
+      
+.. rst-class:: proof-notes
+
+    ====  ===========================================================
+    |c1|  In this case, `a`, `b` are coefficients, `e` and `f` are
+          exponents.
+    |c2|  `* a b` and `+ e f` should be reducable further
+    ====  ===========================================================
+
+Our final rule for multiplying monomials:
+
+.. rst-class:: prefix
+
+    `* * A ^ v E * B ^ v F` |sameas| `* * A B ^ v + E F`
+    
+That's a lot of work, sandwiching two pair of association replacements 
+around a single commutative product. 
+
+In fact, the associative property should be more flexible, especially 
+when we have four or five terms. 
+
+Expanding Association
+---------------------
+
+Remembering our main Association * rule: `* * A B C` |sameas| `* A * B C`,
+let's look at some variations.
+
+`* * * A B C D`
+
+Using the first two mutiplication symbols, we have `* * [* A B] [C] [D]`
+which becomes `* * A B * C D`. Chunking as `* * [A] [B] [* C D]` we can 
+Associate again to get `* A * B * C D`
+
+Using the second and third multiplication symbols, we have `* [* * A B C] D` 
+which becomes `* * A * B C D`. Chunking as `* * [A] [* B C] [D]` we can 
+Associate again to get `* A * * B C D`. Chunking as `* A [* * B C D]` and 
+Associating a third time gets `* A * B * C D`.
+
+This gives us a cycle of Association transformations:
+
+`* * * A B C D` |sameas| 
+`* * A B * C D` |sameas| 
+`* A * B * C D` |sameas| 
+`* A * * B C D` |sameas| 
+`* * A * B C D`
+
+Expanding Commutation
+---------------------
+
+We can do the same thing with the Commutative property, starting from the 
+same statement: `* * * A B C D`.
+
+Commuting at the first multiplication symbol yield: `* D * * A B C`.
+
+Commiting at the second multiplication symbol yields: `* * C * A B D`
+
+Commuting at the third multiplication symbol yields: `* * * B A C D`
+
+As you can imagine, this can give us quite a long list of equivalent statements.
+By combining the 5 forms in the Association Cycle, and with 24 ways 
+to order elements `A B C D`, we have 120 equivalent statements.
+
+Yes, it is possible to get any of the following 120 segments from the other.
+
+
+The four bold statements are the original and the three results of some form 
+of Commutation.
+
+===  ===================  ===================  ===============  ===================  ===============
+Row  Column 1             Column 2             Column 3         Column 4             Column 5
+===  ===================  ===================  ===============  ===================  ===============
+  1  :pi:`* * * A B C D`      `* * A B * C D`  `* A * B * C D`      `* A * * B C D`  `* * A * B C D`
+  2      `* * * A B D C`      `* * A B * D C`  `* A * B * D C`      `* A * * B D C`  `* * A * B D C`
+  3      `* * * A C B D`      `* * A C * B D`  `* A * C * B D`      `* A * * C B D`  `* * A * C B D`
+  4      `* * * A C D B`      `* * A C * D B`  `* A * C * D B`      `* A * * C D B`  `* * A * C D B`
+  5      `* * * A D B C`      `* * A D * B C`  `* A * D * B C`      `* A * * D B C`  `* * A * D B C`
+  6      `* * * A D C B`      `* * A D * C B`  `* A * D * C B`      `* A * * D C B`  `* * A * D C B`
+  7  :pi:`* * * B A C D`      `* * B A * C D`  `* B * A * C D`      `* B * * A C D`  `* * B * A C D`
+  8      `* * * B A D C`      `* * B A * D C`  `* B * A * D C`      `* B * * A D C`  `* * B * A D C`
+  9      `* * * B C A D`      `* * B C * A D`  `* B * C * A D`      `* B * * C A D`  `* * B * C A D`
+ 10      `* * * B C D A`      `* * B C * D A`  `* B * C * D A`      `* B * * C D A`  `* * B * C D A`
+ 11      `* * * B D A C`      `* * B D * A C`  `* B * D * A C`      `* B * * D A C`  `* * B * D A C`
+ 12      `* * * B D C A`      `* * B D * C A`  `* B * D * C A`      `* B * * D C A`  `* * B * D C A`
+ 13      `* * * C A B D`  :pi:`* * C A * B D`  `* C * A * B D`      `* C * * A B D`  `* * C * A B D`
+ 14      `* * * C A D B`      `* * C A * D B`  `* C * A * D B`      `* C * * A D B`  `* * C * A D B`
+ 15      `* * * C B A D`      `* * C B * A D`  `* C * B * A D`      `* C * * B A D`  `* * C * B A D`
+ 16      `* * * C B D A`      `* * C B * D A`  `* C * B * D A`      `* C * * B D A`  `* * C * B D A`
+ 17      `* * * C D A B`      `* * C D * A B`  `* C * D * A B`      `* C * * D A B`  `* * C * D A B`
+ 18      `* * * C D B A`      `* * C D * B A`  `* C * D * B A`      `* C * * D B A`  `* * C * D B A`
+ 19      `* * * D A B C`      `* * D A * B C`  `* D * A * B C`  :pi:`* D * * A B C`  `* * D * A B C`
+ 20      `* * * D A C B`      `* * D A * C B`  `* D * A * C B`      `* D * * A C B`  `* * D * A C B`
+ 21      `* * * D B A C`      `* * D B * A C`  `* D * B * A C`      `* D * * B A C`  `* * D * B A C`
+ 22      `* * * D B C A`      `* * D B * C A`  `* D * B * C A`      `* D * * B C A`  `* * D * B C A`
+ 23      `* * * D C A B`      `* * D C * A B`  `* D * C * A B`      `* D * * C A B`  `* * D * C A B`
+ 24      `* * * D C B A`      `* * D C * B A`  `* D * C * B A`      `* D * * C B A`  `* * D * C B A`
+===  ===================  ===================  ===============  ===================  ===============
+
+So the rules for Association and Commutation give us some flexibility in rewriting
+parts of statements.
+
+Let's just call it :strong:`Flexibility *` rule and :strong:`Flexibility +` rule for 
+addition.
+
+To use flexibility you need 3 multiplication or 3 addition symbols and 4 items 
+
+    1. Use whichever of the 5 Associative Forms is best for the situation
+    2. Fill in the four items in the best order for the situation
+
+We will create 5- and 6-term Associative forms later.
+    
+    
+All the Rows
+------------
+
+In the table above, each row shows the five forms that are equivalent to each other
+simply by Association in each column. 
+
+Consider transforming each statement in Column 1 by commuting on the first multiplication
+symbol. This should return one of the items in Column 4. Row 1 Column 1 transforms to Row 19, 
+Column 4, and Row 2 Column 1 transforms to Row 13 Column 4. Similarly, for every item in Column 1
+you will Commute and get an item in a different Row, so all the rows will map to another row.
+
+Chaining these statements of equivilancy should be possible.
+

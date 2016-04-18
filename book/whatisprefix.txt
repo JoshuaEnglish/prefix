@@ -1,5 +1,5 @@
 ========================
-What is Prefix Notation?
+What is prefix Notation?
 ========================
 
 The standard notation of algebra is infix notation, meaning the 
@@ -10,12 +10,12 @@ there).
 In prefix notation, the operator comes first: :prefix:`+ x 3` and
 :prefix:`* 5 m`. 
 
-*Operators* are the familiar ones: `+ - * ÷ ^`.
+*Operators* are the familiar ones: `+ - * ? ^`.
 
 *Operands* are variables(`a b m n x y...`), numbers, or an operator
 with its operands.
 
-Why Prefix?
+Why prefix?
 -----------
 
 Translation from infix to prefix
@@ -30,12 +30,12 @@ school honors algebra textbook, which I think is a reasonably good book.
 To translate from infix to prefix, remember this rule: **The operator 
 comes first**. It's that simple. Here are some examples:
 
-.. list-table:: Infix to Prefix
+.. list-table:: Infix to prefix
     :widths: 10 10
     :header-rows: 1
     
     * - Infix
-      - Prefix
+      - prefix
     * - :math:`1 + 2`
       - :prefix:`+ 1 2`
     * - :math:`1 * 2`
@@ -58,7 +58,7 @@ Parentheses are your friends. Lets take a simple statement
 and translate it. Then we'll take a more complicated statement
 and translate it.
 
-.. list-table:: Transforming from Infix to Prefix
+.. list-table:: Transforming from Infix to prefix
     :widths: 2 3
     :header-rows: 1
     
@@ -84,7 +84,7 @@ and translate it.
 The order in which you transform parenthesis doesn't matter. Here
 is a longer version that displays innermost-out and outermost-in.
 
-.. list-table:: Transforming Infix to Prefix Again
+.. list-table:: Transforming Infix to prefix Again
     :widths: 2 3
     :header-rows: 1
     
@@ -116,7 +116,7 @@ but the equals sign in parentheses.
 
 Let's use an example from an early proof:
 
-.. list-table:: Prefix to Infix
+.. list-table:: prefix to Infix
     :widths: 2 3
     
     * - `= + ~a + * a 1 * a 0 0`
@@ -156,10 +156,10 @@ A Sample Proof
     :class: proof
 
     * - |c1|
-      - `=` :unchanging:`* a 0` `0`
+      - `=` prefix`* a 0` `0`
       - Given
     * -
-      - `= +` :unchanged:`* a 0` :changing:`0` `0`
+      - `= +` :nchd:`* a 0` :chi:`0` `0`
       - Identity of +
     * -
       - |there4| `* a 0 0`
@@ -187,4 +187,6 @@ to infix to see why. `^ x 2` is :math:`x^2`.) It looks a lot like one of our for
 `+ * A B * A C` but in reality it should be `+ * A B * C D`.
 
 However, we can take `- * 5 ^ y 3 * 3 ^ y 3` and work with it, because the 
-abstract form would be `- * A B * C B`. 
+abstract form would be `- * A B * C B`, and the abstract factored form
+is `* B - A C`.
+

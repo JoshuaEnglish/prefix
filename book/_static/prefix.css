@@ -38,6 +38,9 @@ div.body h6 {
     padding: 2px 3px;
     white-space: nowrap;}
 
+.strong{
+    font-weight: bold;
+}
 sub, sup { font-family: monospace;
           letter-spacing: -1px;}    
 .segment {

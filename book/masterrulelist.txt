@@ -15,7 +15,7 @@ This page lists all the rules in both prefix and infix translations.
     :name: master-rule-list
     
     * - Name
-      - Prefix
+      - prefix
       - Infix
     * - Identity +
       - `+ A 0` |sameas| `A` |sameas| `+ 0 A` 
